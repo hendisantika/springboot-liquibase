@@ -6,8 +6,8 @@ databaseChangeLog:
         - sqlFile:
             dbms: mysql
             encoding: utf8
-            endDelimiter: \n/\s*\n|\n/\s*$
-            path: changelog/scripts/01-create-users-and-addresses-schema.sql
+            endDelimiter: \n/\s*\n|\n/\s*$\;
+            path: migration/01-create-users-and-addresses-schema.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: true
@@ -18,7 +18,7 @@ databaseChangeLog:
         - sqlFile:
             dbms: mysql
             encoding: utf8
-            path: changelog/scripts/02-insert-data-addresses.sql
+            path: migration/02-insert-data-addresses.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: true
@@ -29,7 +29,7 @@ databaseChangeLog:
         - sqlFile:
             dbms: mysql
             encoding: utf8
-            path: changelog/scripts/03-insert-data-users.sql
+            path: migration/03-insert-data-users.sql
             relativeToChangelogFile: true
             splitStatements: true
             stripComments: true
