@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTable
+      author: Hendi Santika
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            endDelimiter: \n/\s*\n|\n/\s*$
+            path: changelog/scripts/01-create-users-and-addresses-schema.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: insertTableAddresses
+      author: Hendi Santika
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            path: changelog/scripts/02-insert-data-addresses.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: insertTableUsers
+      author: Hendi Santika
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            path: changelog/scripts/03-insert-data-users.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
