@@ -29,3 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### macOS ###
+.DS_Store
+
+### Runtime ###
+logs/
