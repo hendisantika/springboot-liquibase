@@ -16,6 +16,8 @@
 
     <properties>
         <java.version>21</java.version>
+        <!-- CVE fix for jackson-databind; drop once the Boot parent manages >= 3.1.5. -->
+        <jackson-bom.version>3.1.5</jackson-bom.version>
     </properties>
 
     <dependencies>
