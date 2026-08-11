@@ -6,7 +6,6 @@ databaseChangeLog:
         - sqlFile:
             dbms: mysql
             encoding: utf8
-            endDelimiter: \n/\s*\n|\n/\s*$\;
             path: migration/01-create-users-and-addresses-schema.sql
             relativeToChangelogFile: true
             splitStatements: true
